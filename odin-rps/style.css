@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0
+}
+
+h1, p {
+    margin: 0;
+}
+
+#container {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#container > div {
+    margin: 20px;
+    border-bottom: 2px solid lightgray;
+}
+
+#container > div:last-child {
+    border: 0
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+#scoreboard div {
+    flex: 1;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+button {
+    height: 40px;
+    width: 80px;
+}
