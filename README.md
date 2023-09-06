@@ -10,8 +10,8 @@ Link: [Your Career in Web Development Starts Here | The Odin Project](https://ww
 | --- | --- | --- | --- |
 | HTML | Recipes | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-recipes) | [Demo](https://dzalt.github.io/the-odin-project/odin-recipes/) |
 | CSS | Landing Page | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-landing-page) | [Demo](https://dzalt.github.io/the-odin-project/odin-landing-page/) |
-| JavaScript | Rock Paper Scissors | Link | Demo |
-| JavaScript | Etch-a-Sketch | Link | Demo |
+| JavaScript | Rock Paper Scissors | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-rps) | [Demo](https://dzalt.github.io/the-odin-project/odin-rps/) |
+| JavaScript | Etch-a-Sketch | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-etch) | [Demo](https://dzalt.github.io/the-odin-project/odin-etch/) |
 | JavaScript | Calculcator | Link | Demo |
 
 ## Intermediate HTML and CSS
