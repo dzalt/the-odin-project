@@ -1,8 +1,8 @@
 // initialize
-
 let rockButton = document.querySelector("#rock-btn");
 let paperButton = document.querySelector("#paper-btn");
 let scissorsButton = document.querySelector("#scissors-btn");
+let container = document.querySelector("#button-container");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -12,7 +12,6 @@ document.getElementById("computer-score").textContent = computerScore;
 
 
 // functions
-
 function getComputerChoice() {
     const rps = ["rock", "paper", "scissors"];
     const computerChoice = rps[Math.floor(Math.random() * rps.length)];
@@ -57,20 +56,24 @@ function game(playerSelection) {
             document.getElementById("message").textContent = "Computer is the winner";
         }
 
-        // remove rock and paper button
-        // alter scissors button as reset button
-        rockButton.remove();
-        paperButton.remove();
-        document.getElementById("scissors-btn").textContent = "Reset";
-        scissorsButton.addEventListener("click", () => {
-            location.reload() // to reset browser
+        // remove rock paper scissors buttons
+        while(container.firstChild) {
+            container.removeChild(container.lastChild)
+        }
+        
+        // add reset button
+        let resetButton = document.createElement("button");
+        resetButton.textContent = "Reset";
+        container.appendChild(resetButton);
+
+        resetButton.addEventListener("click", () => {
+            location.reload() // refresh browser
         });
     }
 }
 
 
 // event listener for buttons
-
 rockButton.addEventListener("click", () => {
     game("rock")
 });
