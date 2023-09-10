@@ -70,7 +70,7 @@ randomButton.addEventListener("click", () => {
 
 resetButton.addEventListener("click", () => {
     let allSquares = document.querySelectorAll(".square");
-    // allSquares.forEach(square => square.parentNode.removeChild(square));
-    allSquares.forEach(square => square.style.backgroundColor = "white")
+    // allSquares.forEach((square) => square.parentNode.removeChild(square));
+    allSquares.forEach((square) => square.style.backgroundColor = "white")
 });
 
