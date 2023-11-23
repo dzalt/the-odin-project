@@ -7,44 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculator</h1>
-
-    <div class="container">
-        <div class="screen">
-            <div class="prev-num"></div>
-            <div class="current-num"></div>
+    <div id="calculator">
+        <div id="top-container">
+            <div id="screen">
+                <div id="prev-num"></div>
+                <div id="current-num"></div>
+            </div>
+            <button id="reset">AC</button>
         </div>
-        <button class="clear">C</button>
+        <div class="button-container">
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="operator">/</button>
+        </div>
+        <div class="button-container">
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">X</button>
+        </div>
+        <div class="button-container">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">-</button>
+        </div>
+        <div class="button-container">
+            <button class="number">0</button>
+            <button id="decimal">.</button>
+            <button id="equal">=</button>
+            <button class="operator">+</button>
+        </div>
     </div>
-
-    <div class="container">
-        <button class="number">7</button>
-        <button class="number">8</button>
-        <button class="number">9</button>
-        <button class="operator">/</button>
-    </div>
-
-    <div class="container">
-        <button class="number">4</button>
-        <button class="number">5</button>
-        <button class="number">6</button>
-        <button class="operator">X</button>
-    </div>
-
-    <div class="container">
-        <button class="number">1</button>
-        <button class="number">2</button>
-        <button class="number">3</button>
-        <button class="operator">-</button>
-    </div>
-
-    <div class="container">
-        <button class="decimal">.</button>
-        <button class="number">0</button>
-        <button class="equal">=</button>
-        <button class="operator">+</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,76 +1,78 @@
-// default value
+const screen = document.querySelector("#screen");
+const sizeBtn = document.querySelector("#size");
+const blackBtn = document.querySelector("#black");
+const randomBtn = document.querySelector("#random");
+const resetBtn = document.querySelector("#reset");
+let color = "black";
 createSquare(16);
-let color = "black"
 
 
-// functions
-function createSquare(size) {
-    let container = document.querySelector("#container");
+// BUTTONS
 
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+sizeBtn.addEventListener("click", () => {
+    let size = getSize();
+    createSquare(size);
+});
 
-    let numSquare = size * size;
+blackBtn.addEventListener("click", () => {
+    color = "black";
+});
 
-    for(let i = 0; i < numSquare; i++) {
-        let square = document.createElement("div");
-        square.setAttribute("class", "square");
+randomBtn.addEventListener("click", () => {
+    color = "random";
+});
 
-        // square.addEventListener("mouseover", function(){
-        //     square.style.backgroundColor = "black"
-        // });
+resetBtn.onclick = reset;
 
-        square.addEventListener("mouseover", colorSquare)
 
-        container.appendChild(square);
+// FUNCTIONS
+
+function getSize() {
+    // function to resize screen
+    // for size button
+
+    let input = prompt("Input board size:");
+
+    if (input == "") {
+        alert("You didn't input any value");
+    } else if (input >= 1 && input <= 100) {
+        alert(`Screen is set to ${input}`);
+        return input;
+    } else {
+        alert("Please input a number between 1 - 100");
     }
 }
 
-function getSize() {
-    let input = prompt("Input board size:");
-    let message = document.querySelector("#message");
+function createSquare(size) {
+    // function to add little squares to draw on screen
 
-    if (input == "") {
-        message.textContent = "You didn't input any value"
-    } else if (input < 0 || input > 100) {
-        message.textContent = "Please input a number between 1 - 100"
-    } else {
-        message.textContent = `Board is set to ${input}`;
-        return input;
+    screen.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    screen.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let numSquare = size * size;
+
+    for (let i = 0; i < numSquare; i++) {
+        const square = document.createElement("div");
+        square.setAttribute("class", "square");
+        square.addEventListener("mouseover", colorSquare);
+        screen.appendChild(square);
     }
 }
 
 function colorSquare() {
+    // function to add color to the squares 
+    // for createSquare function
+
     if (color == "random") {
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else {
-        this.style.backgroundColor = "black"
+        this.style.backgroundColor = "black";
     }
 }
 
+function reset() {
+    //  function to give all square class a white background
 
-// config buttons
-let sizeButton = document.querySelector("#size-btn");
-let blackButton = document.querySelector("#black-btn");
-let randomButton = document.querySelector("#random-btn");
-let resetButton = document.querySelector("#reset-btn");
-
-sizeButton.addEventListener("click", () => {
-    let size = getSize();
-    createSquare(size)
-});
-
-blackButton.addEventListener("click", () => {
-    color = "black"
-});
-
-randomButton.addEventListener("click", () => {
-    color = "random"
-});
-
-resetButton.addEventListener("click", () => {
-    let allSquares = document.querySelectorAll(".square");
-    // allSquares.forEach((square) => square.parentNode.removeChild(square));
-    allSquares.forEach((square) => square.style.backgroundColor = "white")
-});
-
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => square.style.backgroundColor = "white");
+}

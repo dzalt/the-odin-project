@@ -7,26 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="rule">The first to get 5 points is the winner!</div>
-    <div id="message">Good luck!</div>
-    
-    <div id="scoreboard">
-        <div class="score">
-            <p>You</p>
-            <p id="player-score"></p>
+    <h1>Welcome to Rock Paper Scissors</h1>
+    <h2 id="text">The first to get 5 points is the winner!</h2>
+    <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <div id="score-board">
+        <div>
+            <h3 id="player-name">You</h3>
+            <div><img id="player-emoji" src="assets/paper.png"></div>
+            <h3>Score: <span id="player-score">-</span></h3>
         </div>
-        <div class="score">
-            <p>Computer</p>
-            <p id="computer-score"></p>
+        <div>
+            <h3 id="computer-name">Computer</h3>
+            <div><img id="computer-emoji" src="assets/paper.png"></div>
+            <h3>Score: <span id="computer-score">-</span></h3>
         </div>
     </div>
-    
-    <div id="button-container">
-        <button id="rock-btn">Rock</button>
-        <button id="paper-btn">Paper</button>
-        <button id="scissors-btn">Scissors</button>
+    <div id="message-board">
+        <p>Good luck</p>
     </div>
+    <button id="reset">Reset</button>
 
     <script src="script.js"></script>
 </body>

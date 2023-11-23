@@ -1,133 +1,120 @@
-// declare
-let screen = document.querySelector(".screen");
-let equalButton = document.querySelector(".equal");
-let clearButton = document.querySelector(".clear");
-let decimalButton = document.querySelector(".decimal");
+const numberBtn = document.querySelectorAll(".number");
+const operatorBtn = document.querySelectorAll(".operator");
+const equalBtn = document.querySelector("#equal");
+const decimalBtn = document.querySelector("#decimal");
+const resetBtn = document.querySelector("#reset");
+const prevNumText = document.querySelector("#prev-num");
+const currentNumText = document.querySelector("#current-num");
+let prevNum = "";
+let currentNum = "";
+let operator = "";
+currentNumText.textContent = 0;
 
-let numbers = document.querySelectorAll(".number");
-let operators = document.querySelectorAll(".operator");
+// BUTTONS
 
-let prevNumberDisplay = document.querySelector(".prev-num");
-let currentNumberDisplay = document.querySelector(".current-num");
-let prevNumber = "";
-let currentNumber = "";
-let currentOperator = "";
-
-
-// event listener
-numbers.forEach((button) => {
+numberBtn.forEach((button) => {
     button.addEventListener("click", (e) => {
-        getNumber(e.target.textContent);
+        getnumber(e.target.textContent)
     });
 });
 
-operators.forEach((button) => {
+operatorBtn.forEach((button) => {
     button.addEventListener("click", (e) => {
-        getOperator(e.target.textContent);
+        getoperator(e.target.textContent)
     });
 });
 
-equalButton.addEventListener("click", calculate);
-clearButton.addEventListener("click", clearDisplay);
-decimalButton.addEventListener("click", addDecimal);
+equalBtn.onclick = calculate;
+decimalBtn.onclick = decimal;
+resetBtn.onclick = reset;
 
+// FUNCTIONS
 
-// functions
-function getNumber(number) {
-    // console.log(num);
-    // to make number not go off screen:
-    if (currentNumber.length < 16) {
-        currentNumber += number;
-        currentNumberDisplay.textContent = currentNumber;
-    }
+function getnumber(num) {
+    // to process input from number buttons
+
+    currentNum += num;
+    currentNumText.textContent = currentNum
 }
-console.log
 
-function getOperator(operator) {
-    currentOperator = operator;
-    // move numbers from bottom screen to top screen:
-    prevNumber = currentNumber;
-    prevNumberDisplay.textContent = prevNumber + " " + operator;
-    currentNumber = "";
-    currentNumberDisplay.textContent = currentNumber;
+function getoperator(op) {
+    // to process input from operator buttons
+
+    // to calculate multiple number without clicking equal button
+    if (operator != "") {
+        calculate()
+    }
+
+    operator = op;
+    prevNum = currentNum;
+    currentNum = "";
+    prevNumText.textContent = prevNum + " " + operator;
+    currentNumText.textContent = 0;
 }
 
 function calculate() {
-    // convert string to number:
-    prevNumber = Number(prevNumber);
-    currentNumber = Number(currentNumber);
+    // to calculate current number and prev number
+    prevNum = Number(prevNum);
+    currentNum = Number(currentNum);
 
-    if (currentOperator === "+") {
-        prevNumber += currentNumber;
-    } else if (currentOperator === "-") {
-        prevNumber -= currentNumber;
-    } else if (currentOperator === "X") {
-        prevNumber *= currentNumber;
-    } else if (currentOperator === "/") {
-        if (currentNumber == 0) {
-            prevNumber = "Error";
-            display();
-            return; // to ignore the rest of if-else
-        }
-        prevNumber /= currentNumber;
-    }
-    prevNumber = prevNumber.toString(); // without this, slice (on display function) won't work
-    display();
-}
-
-function display() {
-    currentOperator = ""; // to not calculate again when user accidentaly double-click equal button
-    prevNumberDisplay.textContent = "";
-    currentNumber = prevNumber;
-
-    // to make number not go off screen:
-    if (prevNumber.length > 16) {
-        currentNumberDisplay.textContent = prevNumber.slice(0, 16) + "...";
-    } else {
-        currentNumberDisplay.textContent = prevNumber;
+    switch(operator) {
+        case "+":
+            currentNum = prevNum + currentNum;
+            break;
+        case "-":
+            currentNum = prevNum - currentNum;
+            break;
+        case "X":
+            currentNum = prevNum * currentNum;
+            break;
+        case "/":
+            currentNum = prevNum / currentNum;
+            break;
     }
 
-    console.log(prevNumber);
-    console.log(currentNumber);
+    prevNumText.textContent = "";
+    currentNumText.textContent = currentNum;
+    operator = "";
 }
 
-function clearDisplay() {
-    currentNumber = "";
-    prevNumber = "";
-    currentOperator = "";
-    currentNumberDisplay.textContent = "";
-    prevNumberDisplay.textContent = "";
-}
-
-function addDecimal() {
-    // if user already has decimal, don't add again
-    if (!currentNumber.includes(".")) {
-        currentNumber += ".";
-        currentNumberDisplay.textContent = currentNumber;
+function decimal() {
+    // to add decimal, but if current number has decimal, don't add again
+    if (!currentNum.includes(".")) {
+        currentNum += ".";
+        currentNumText.textContent = currentNum;
     }
 }
 
+function reset() {
+    // to reset to initial value
+    prevNum = "";
+    currentNum = "";
+    operator = "";
+    prevNumText.textContent = prevNum;
+    currentNumText.textContent = 0;
+}
 
-// keyboard functionality
-window.addEventListener("keydown", getKeyboard);
+// KEYBOARD FUNCTIONALITY
 
-function getKeyboard(e) {
+window.addEventListener("keydown", getkeyboard);
+
+function getkeyboard(e) {
     if (e.key >= 0 && e.key <= 9) {
-        getNumber(e.key);
+        getnumber(e.key);
     } else if (e.key === "+" || e.key === "-" || e.key === "/") {
-        getOperator(e.key);
+        getoperator(e.key);
     } else if (e.key === "*" || e.key === "x" || e.key === "X") {
-        getOperator("X");
+        getoperator("X");
     } else if (e.key === "Enter" || e.key === "=") {
         calculate();
     } else if (e.key === ".") {
-        addDecimal();
+        decimal();
     } else if (e.key === "Backspace") {
         backspace()
     }
 }
 
 function backspace() {
-    currentNumber = currentNumber.slice(0,-1);
-    currentNumberDisplay.textContent = currentNumber;
+    currentNum = currentNum.slice(0,-1);
+    currentNumText.textContent = currentNum;
 }

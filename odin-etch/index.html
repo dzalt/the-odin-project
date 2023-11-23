@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
+    <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <button id="size-btn">Set Size</button>
-    <p id="message"></p>
-    <div id="container"></div>
-    <div id="button-container">
-        <button id="black-btn">Black</button>
-        <button id="random-btn">Random</button>
-        <button id="reset-btn">Reset</button>
-    </div>
-
+    <div id="etch">
+        <div id="top">
+            <h1>Etch-A-Sketch</h1>
+            <div><button id="size">Set Size</button></div>
+        </div>
+        <div id="screen"></div>
+        <div id="button-container">
+            <div class="circle"></div>
+            <button id="black">Black</button>
+            <button id="random">Random</button>
+            <button id="reset">Reset</button>
+            <div class="circle"></div>
+        </div>
+    </div> 
     <script src="script.js"></script>
 </body>
 </html>

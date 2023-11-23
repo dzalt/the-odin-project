@@ -1,9 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+
 body {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 button {
@@ -11,17 +17,50 @@ button {
     height: 40px;
 }
 
-#container {
+#etch {
+    border: 3px solid black;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: firebrick;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-style: italic;
+    color: gold;
+}
+
+#screen {
     border: 1px solid black;
     width: 500px;
     height: 500px;
-    margin: 10px;
+    background-color: white;
+    margin: 10px 0;
     display: grid;
-
 }
 
 #button-container {
+    width: 650px;
     display: flex;
-    width: 500px;
+    align-items: center;
     justify-content: space-between;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
 }
