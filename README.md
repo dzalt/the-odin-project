@@ -1,40 +1,25 @@
-# The Odin Project
+# the odin project
 
-My projects for The Odin Project.
+link: https://www.theodinproject.com/
 
-Link: [Your Career in Web Development Starts Here | The Odin Project](https://www.theodinproject.com/)
+## foundation
 
-## Foundation
+| lesson | project | repo | live |
+| --- |  --- |  --- |  --- |
+| html & css | landing page | [link](https://github.com/dzalt/the-odin-project/tree/main/01-foundations/01-landing-page) | [link](https://dzalt.github.io/the-odin-project/01-foundations/01-landing-page/) |
+| javascript | rock, paper, scissors | [link](https://github.com/dzalt/the-odin-project/tree/main/01-foundations/02-rps-etch-calc) | [link](https://dzalt.github.io/the-odin-project/01-foundations/02-rps-etch-calc/) |
+| javascript | etch-a-sketch | [link](https://github.com/dzalt/the-odin-project/tree/main/01-foundations/02-rps-etch-calc) | [link](https://dzalt.github.io/the-odin-project/01-foundations/02-rps-etch-calc/) |
+| javascript | calculator | [link](https://github.com/dzalt/the-odin-project/tree/main/01-foundations/02-rps-etch-calc) | [link](https://dzalt.github.io/the-odin-project/01-foundations/02-rps-etch-calc/) |
 
-| Lesson | Project | Repo | Live |
-| --- | --- | --- | --- |
-| HTML | Recipes | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-recipes) | [Demo](https://dzalt.github.io/the-odin-project/odin-recipes/) |
-| CSS | Landing Page | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-landing-page) | [Demo](https://dzalt.github.io/the-odin-project/odin-landing-page/) |
-| JavaScript | Rock Paper Scissors | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-rps) | [Demo](https://dzalt.github.io/the-odin-project/odin-rps/) |
-| JavaScript | Etch-A-Sketch | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-etch) | [Demo](https://dzalt.github.io/the-odin-project/odin-etch/) |
-| JavaScript | Calculcator | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-calculator) | [Demo](https://dzalt.github.io/the-odin-project/odin-calculator/) |
+## intermediate html and css
 
-## Intermediate HTML and CSS
+| lesson | project | repo | live |
+| --- |  --- |  --- |  --- |
+| html & css | form | [link](https://github.com/dzalt/the-odin-project/tree/main/02-intermediate-html-css/01-sign-up-form) | [link](https://dzalt.github.io/the-odin-project/02-intermediate-html-css/01-sign-up-form/) |
+| html & css | admin dashboard | [link](https://github.com/dzalt/the-odin-project/tree/main/02-intermediate-html-css/02-admin-dashboard) | [link](https://dzalt.github.io/the-odin-project/02-intermediate-html-css/02-admin-dashboard/) |
 
-| Lesson | Project | Repo | Live |
-| --- | --- | --- | --- |
-| HTML and CSS | Form | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-form) | [Demo](https://dzalt.github.io/the-odin-project/odin-form/) |
-| HTML and CSS | Admin Dashboard | [Link](https://github.com/dzalt/the-odin-project/tree/main/odin-dashboard) | [Demo](https://dzalt.github.io/the-odin-project/odin-dashboard/) |
+## javascript
 
-## JavaScript
-
-| Lesson | Project | Repo | Live |
-| --- | --- | --- | --- |
-| - | - | - | - |
-
-## React
-
-| Lesson | Project | Repo | Live |
-| --- | --- | --- | --- |
-| - | - | - | - |
-
-## NodeJS
-
-| Lesson | Project | Repo | Live |
-| --- | --- | --- | --- |
-| - | - | - | - |
+| lesson | project | repo | live |
+| --- |  --- |  --- |  --- |
+| javascript | - | link | link |
