@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #F9FAF8;
+}
+
+section:nth-of-type(even) {
+    background-color: #E5E7EB;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 1em;
+}
+
+/* ROCK PAPER SCISSORS */
+
+#rps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#score {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#message {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+/* ETCH A SKETCH */
+
+#etch {
+    background-color: firebrick;
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 700px;
+    height: 700px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#etch h1 {
+    font-family: "Pacifico", cursive, sans-serif;
+    font-size: 2em;
+    color: gold;
+}
+
+#etch-screen {
+    background-color: white;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    display: grid;
+}
+
+#etch-container {
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+/* CALCULATOR */
+
+#calc {
+    background-color: lightgray;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+#calc > div {
+    display: flex;
+    gap: 10px;
+}
+
+#calc-screen {
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 170px;
+    height: 50px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+#calc button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.operator, #decimal, #equal {
+    background-color: lightblue;
+}
+
+.operator:hover, #decimal:hover, #equal:hover {
+    background-color: skyblue;
+}
+
+#calc-reset {
+    background-color: orange;
+}
+
+#calc-reset:hover {
+    background-color: darkorange;
+}
+
+.number {
+    background-color: whitesmoke;
+}
+
+.number:hover {
+    background-color: gainsboro;
+}

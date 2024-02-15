@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+header, section, footer {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding: 100px 0;
+}
+
+section:nth-of-type(1), header, footer {
+    background-color: #1F2937;
+    color: #F9FAF8;
+}
+
+section:nth-of-type(2) {
+    background-color: #F9FAF8;
+    color: #1F2937;
+    padding-top: 50px
+}
+
+section:nth-of-type(3) {
+    background-color: #E5E7EB;
+    color: #1F2937;
+}
+
+section:nth-of-type(4) {
+    background-color: #F9FAF8;
+    color: #F9FAF8;
+}
+
+button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px
+}
+
+nav, .container {
+    width: 50%;
+}
+
+/* HEADER */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #F9FAF8;
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    gap: 25px;
+}
+
+.hero div {
+    flex: 1;
+    line-height: 1.4; /* for text */
+    position: relative; /* for button */
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero button {
+    position: absolute;
+    bottom: 0;
+}
+
+/* INFO */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px
+}
+
+.info h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.info > div {
+    /* for card container */
+    display: flex;
+    gap: 25px
+}
+
+.card > div {
+    /* for card img */
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 2px solid #3882F6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: auto;
+    height: 100%
+}
+
+.card p {
+    text-align: center;
+}
+
+/* QUOTE */
+
+.quote p {
+    font-size: 36px;
+    font-style: italic;
+}
+
+.quote span {
+    display: block; /* for text align */
+    text-align: right;
+}
+
+/* CALL TO ACTION */
+
+.call-to-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #3882F6;
+    line-height: 1.4; /* for text */
+    padding: 40px 80px;
+}
+
+.call-to-action button {
+    border: 1px solid #F9FAF8;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+}

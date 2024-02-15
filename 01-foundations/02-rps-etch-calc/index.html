@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Projects</h1></header>
+
+    <section>
+        <div id="rps">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <p id="text">The first to get 5 points is the winner!</p>
+            <div id="score">
+                <p>YOU: <span id="player-score"></span></p>
+                <p>COMPUTER: <span id="comp-score"></span></p>
+            </div>
+            <div>
+                <button id="rock">ROCK</button>
+                <button id="paper">PAPER</button>
+                <button id="scissors">SCISSORS</button>
+            </div>
+            <div id="message">
+                <p>GOOD LUCK</p>
+            </div>
+            <button id="rps-reset">RESET</button>
+        </div>
+    </section>
+
+    <section>
+        <div id="etch">
+            <h1>Etch-A-Sketch</h1>
+            <button id="size">SET SIZE</button>
+            <div id="etch-screen"></div>
+            <div id="etch-container">
+                <div class="circle"></div>
+                <button id="black">BLACK</button>
+                <button id="random">RANDOM</button>
+                <button id="etch-reset">RESET</button>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="calc">
+            <h1>CALCULATOR</h1>
+            <div>
+                <div id="calc-screen">
+                    <div id="prev-num"></div>
+                    <div id="current-num"></div>
+                </div>
+                <button id="calc-reset">AC</button>
+            </div>
+            <div>
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="operator">/</button>
+            </div>
+            <div>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="operator">X</button>
+            </div>
+            <div>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="operator">-</button>
+            </div>
+            <div>
+                <button class="number">0</button>
+                <button id="decimal">.</button>
+                <button id="equal">=</button>
+                <button class="operator">+</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="rps.js"></script>
+    <script src="etch.js"></script>
+    <script src="calc.js"></script>
+
+    <footer>
+        <p>The Odin Project</p>
+    </footer>
+</body>
+</html>
